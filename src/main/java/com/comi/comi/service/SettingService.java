@@ -24,7 +24,7 @@ public class SettingService {
                 }).orElseThrow(() -> new RuntimeException("Setting not found with id " + id));
     }
 
-    public Settings getSettingByUserId(Settings userId) {
+    public Settings getSettingByUserId(int userId) {
         return settingRepository.findByUserId(userId)
                 .orElseThrow(() -> new RuntimeException("Setting not found for user id " + userId));
     }

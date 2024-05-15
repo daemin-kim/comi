@@ -1,6 +1,5 @@
 package com.comi.comi.service;
 
-import com.comi.comi.domain.CallRecords;
 import com.comi.comi.domain.Feedback;
 import com.comi.comi.repository.FeedbackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ public class FeedbackService {
         return feedbackRepository.save(feedback);
     }
 
-    public Feedback getFeedbackByCallId(CallRecords callId) {
+    public Feedback getFeedbackByCallId(int callId) {
         return feedbackRepository.findByCallId(callId).orElse(null);
     }
 }

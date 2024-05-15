@@ -15,7 +15,7 @@ public class ConversationService {
         return conversationRepository.save(conversation);
     }
 
-    public Conversation getConversationByCallId(Conversation callId) {
+    public Conversation getConversationByCallId(int callId) {
         return conversationRepository.findByCallId(callId).orElse(null);
     }
 }
